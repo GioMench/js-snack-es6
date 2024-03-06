@@ -59,7 +59,6 @@ const zucchine = [
 
 ];
 
-
 const zucchineLigth = zucchine.filter(zucchina => zucchina.long <= 15);
 sumLight = 0
 zucchineLigth.forEach(zucchinaLigth => sumLight += zucchinaLigth.long);
@@ -69,4 +68,6 @@ const zucchineHeavy = zucchine.filter(zucchina => zucchina.long > 15);
 sumHeavy = 0
 zucchineHeavy.forEach(zucchinaHeavy => sumHeavy += zucchinaHeavy.long);
 console.log(sumHeavy);
+
+
 
