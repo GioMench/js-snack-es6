@@ -45,12 +45,12 @@ const personList = [
         cognome: 'Amerena',
         età: '15'
     }
-    
+
 ]
 
 
 const personDescription = personList.map(person => {
-    if ( person.età >= 18) {
+    if (person.età >= 18) {
         return `${person.nome} ${person.cognome} può guidare`;
     }
     return `${person.nome} ${person.cognome} non può guidare`;
@@ -59,4 +59,20 @@ const personDescription = personList.map(person => {
 
 
 console.log(personDescription);
-   
+
+//correzione
+
+const personsDescription = personList.map(person => {
+    if (person.età >= 18) {
+        person.canDrive = `${person.nome} ${person.cognome} può guidare`;
+
+    } else {
+        person.canDrive = `${person.nome} ${person.cognome} non può guidare`;
+    }
+
+    return person
+})
+
+
+console.log(personsDescription);
+
