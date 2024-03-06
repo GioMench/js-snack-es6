@@ -39,7 +39,28 @@ const bikes = [
 const bikesweight = bikes.map(bike => bike = bike.weight);
 console.log(bikesweight);
 
-let theLighter = Math.min(...bikesweight);
+let theLighter = Math.min(...bikesweight); // [1,2,3]
 console.log(theLighter);
 
+// bikes. trovare a che indece e' il peso minore let indice ... bikes[indice]
+
+
+
+
+
+
+let lighterPeso = bikes[0].weight; // assegno il peso della prima bici alla mia variabile che poi utilizzero per fare confronto
+let lighterNome; // sara il nome della bici meno pesante
+bikes.forEach(bike => {
+    /*let weight = bike.weight, 
+    name = bike.name;*/
+    let { name, weight } = bike;
+
+    if (weight < lighterPeso) {
+        lighterPeso = weight;
+        lighterNome = name;
+    }
+});
+
+console.log(`La bici che pesa di meno (${lighterPeso}kg) e' ${lighterNome}`);
 
